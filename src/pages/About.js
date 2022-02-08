@@ -6,11 +6,9 @@ import PDFFile from "../components/PDFFile";
 import ContactForm from "../components/ContactForm";
 
 const About = () => {
-  const [showResume, setShowResume] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
   const ContactHandler = () => {
-    setShowResume(false);
     setShowContact(!showContact);
   };
 
@@ -33,7 +31,6 @@ const About = () => {
         />
       </div>
 
-      {showResume && <PDFFile />}
       {showContact && <ContactForm />}
     </div>
   );
