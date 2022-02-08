@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Styles from "./About.module.css";
 import Avatar from "../images/PD Yearbook Portraite.svg";
 import EmailLogo from "../images/Email Logo.svg";
-import PDFFile from "../components/PDFFile";
 import ContactForm from "../components/ContactForm";
 
 const About = () => {
