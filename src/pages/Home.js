@@ -11,7 +11,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       TextHandler();
-    }, 1500); //1000 = 1 second
+    }, 1000); //1000 = 1 second
     return () => clearInterval(interval);
   }, []);
 
