@@ -4,8 +4,8 @@ import { Document, Page, pdfjs } from 'react-pdf';
 
 const PDFFile = () => {
   
-  const [numPages, setNumPages] = useState(null);
-  const [pageNumber, setPageNumber] = useState(1);
+  {/*const [numPages, setNumPages] = useState(null);
+  const [pageNumber, setPageNumber] = useState(1);*/}
 
   pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
 

@@ -9,11 +9,6 @@ const About = () => {
   const [showResume, setShowResume] = useState(false);
   const [showContact, setShowContact] = useState(false);
 
-  {/*const ResumeHandler = () => {
-    setShowResume(!showResume);
-    setShowContact(false);
-  };*/}
-
   const ContactHandler = () => {
     setShowResume(false);
     setShowContact(!showContact);
@@ -30,19 +25,11 @@ const About = () => {
       </div>
 
       <div className={Styles.imageGroup}>
-        {/*<img
-          src={ResumeLogo}
-          alt=""
-          onClick={ResumeHandler}
-          className={Styles.imageButton}
-          //data-aos= {anim}
-      />*/}
         <img
           src={EmailLogo}
           alt=""
           onClick={ContactHandler}
           className={Styles.imageButton}
-          //data-aos= {anim}
         />
       </div>
 
