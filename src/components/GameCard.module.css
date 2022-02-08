@@ -1,0 +1,14 @@
+.gameCard{
+  margin: auto;
+}
+
+.gifGroup{
+  display: flex;
+  margin: auto;
+  margin-top: 10vh;
+  justify-content:center;
+}
+
+.gifGroup img{
+  width: 80%;
+}

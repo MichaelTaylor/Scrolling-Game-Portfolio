@@ -1,0 +1,54 @@
+.about {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
+    font-weight: bold;
+    min-height: 200vh;
+    text-align: center;
+    justify-content: center;
+    min-width: 800px;
+  }
+
+  .avatarImage{
+    margin:auto;
+    width: 30%;
+    margin-top: 50vh;
+  }
+
+  .textContact{
+    color: rgb(255, 255, 255);
+    margin-top: 70px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 200px;
+  }
+
+  .imageGroup {
+    display: flex;
+    margin: auto;
+    margin-top: 20vh;
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    
+  }
+  
+  .imageButton{
+    width: 10vw;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .imageButton{
+      width: 50vw;
+    }
+  }
+  
+  .imageButton:hover{
+    cursor:pointer;
+    opacity: 40%;
+  }
+  
+  .imageGroup img{
+      max-width: 60%;
+  }

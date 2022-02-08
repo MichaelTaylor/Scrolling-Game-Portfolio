@@ -1,0 +1,32 @@
+.imageGroup {
+  display: flex;
+  margin: auto;
+  margin-top: 20vh;
+  align-self: center;
+  align-items: center;
+  align-content: center;
+  justify-content: space-around;
+  
+}
+
+.imageButton{
+  width: 10vw;
+}
+
+@media screen and (max-width: 500px) {
+  .imageButton{
+    width: 50vw;
+  }
+}
+
+.imageButton:hover{
+  cursor:pointer;
+  opacity: 40%;
+}
+
+.imageGroup img{
+    max-width: 60%;
+}
+
+
+

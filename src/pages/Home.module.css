@@ -1,0 +1,25 @@
+.home {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  min-height: 135vh;
+  min-width: 800px;
+  margin: auto;
+}
+
+.fontStyle{
+  text-align: center;
+  font-family: 'Press Start 2P';
+  font-size: 4rem;
+  padding-top: 50vh;
+}
+
+@media screen and (max-width: 600px) {
+
+  .home {
+    min-height: 255vh;
+  }
+
+  .fontStyle{
+    font-size: 5rem;
+  }
+}
