@@ -1,76 +1,85 @@
-import React, {useEffect} from "react";
+import React from "react";
 import Styles from "./PlatformGroup.module.css";
 import SteamLogo from "../images/Steam Logo.svg";
 import GoGLogo from "../images/GoG Logo.svg";
 import ItchLogo from "../images/Itch Logo.svg";
 import SwitchLogo from "../images/Switch Logo.svg";
 import XboxLogo from "../images/Xbox Logo.svg";
-import PlayStationLogo from "../images/Playstation Logo.svg"
-import Aos from "aos";
-import "aos/dist/aos.css";
+import PlayStationLogo from "../images/Playstation Logo.svg";
 
-const anim = "fade-up";
+const PlatformGroup = ({ platformInfo }) => {
+  const GoToSteam = () => {
+    window.open(platformInfo.SteamLink, "_blank");
+  };
 
-const PlatformGroup = (props) => {
+  const GoToGoG = () => {
+    window.open(platformInfo.GoGLink, "_blank");
+  };
 
-  useEffect(() => {
-    Aos.init({ duration: 1500 });
-  }, []);
+  const GoToItch = () => {
+    window.open(platformInfo.ItchLink, "_blank");
+  };
+
+  const GoToSwitch = () => {
+    window.open(platformInfo.SwitchLink, "_blank");
+  };
+
+  const GoToXbox = () => {
+    window.open(platformInfo.XboxLink, "_blank");
+  };
+
+  const GoToPlayStation = () => {
+    window.open(platformInfo.platformInfo, "_blank");
+  };
 
   return (
     <div className={Styles.imageGroup}>
-      {props.onSteam && (
+      {platformInfo.onSteam && (
         <img
           src={SteamLogo}
           alt=""
-          onClick={props.SteamLink}
+          onClick={GoToSteam}
           className={Styles.imageButton}
-          data-aos= {anim}
         />
       )}
-      {props.onGoG && (
+      {platformInfo.onGoG && (
         <img
           src={GoGLogo}
           alt=""
-          onClick={props.GoGLink}
+          onClick={GoToGoG}
           className={Styles.imageButton}
-          data-aos={anim}
         />
       )}
-      {props.onItch && (
+      {platformInfo.onItch && (
         <img
           src={ItchLogo}
           alt=""
-          onClick={props.ItchLink}
+          onClick={GoToItch}
           className={Styles.imageButton}
-          data-aos={anim}
         />
       )}
-      {props.onSwitch && (
+      {platformInfo.onSwitch && (
         <img
           src={SwitchLogo}
           alt=""
-          onClick={props.SwitchLink}
+          onClick={GoToSwitch}
           className={Styles.imageButton}
-          data-aos={anim}
         />
       )}
-      {props.onXbox && (
+      {platformInfo.onXbox && (
         <img
           src={XboxLogo}
           alt=""
-          onClick={props.XboxLink}
+          onClick={GoToXbox}
           className={Styles.imageButton}
-          data-aos={anim}
         />
       )}
-      {props.onPlayStation && (
+      {platformInfo.onPlayStation && (
         <img
           src={PlayStationLogo}
           alt=""
-          onClick={props.PlayStationLink}
+          onClick={GoToPlayStation}
           className={Styles.imageButton}
-          data-aos={anim}
         />
       )}
     </div>

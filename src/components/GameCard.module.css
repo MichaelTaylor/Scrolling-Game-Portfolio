@@ -2,6 +2,21 @@
   margin: auto;
 }
 
+.textStyle,.descriptionStyle{
+  margin: auto;
+  color:white;
+  font-size: 3rem;
+  width: 150vh;
+  font-family: 'Press Start 2P';
+  margin-top: 5vh;
+  text-align: center;
+}
+
+.descriptionStyle{
+  font-size: 2.5rem;
+  margin-top: 5vh;
+}
+
 .gifGroup{
   display: flex;
   margin: auto;
@@ -10,5 +25,5 @@
 }
 
 .gifGroup img{
-  width: 80%;
+  width: 90vh;
 }

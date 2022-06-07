@@ -17,8 +17,8 @@ const About = () => {
         <img src={Avatar} alt="" className={Styles.avatarImage} />
       </div>
       <div className={Styles.textContact}>
-        Been a programmer for many years in the game industry. Now I've adopted
-        some Front End React skills. Feel free to contact me below.
+        Been a programmer for many years in the game industry. Unity is my
+        weapon of choice.
       </div>
 
       <div className={Styles.imageGroup}>

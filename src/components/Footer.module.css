@@ -1,0 +1,8 @@
+.footerStyle{
+    display: flex;
+    justify-content: center;
+    margin: 2vh;
+    color: white;
+    font-size: 2rem;
+    font-family: 'Press Start 2P';
+}

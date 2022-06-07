@@ -8,7 +8,7 @@ const ContactForm = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     EmailJS.sendForm(
-      "service_hc2331b",
+      "service_cokmfmm",
       "template_sye8zsl",
       e.target,
       "user_tizXV5cqb3QMiQ4eCjqDc"
