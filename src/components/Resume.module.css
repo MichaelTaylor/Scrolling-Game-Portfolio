@@ -1,0 +1,9 @@
+.resumeStyle{
+    margin: auto;
+    width: 50vw;
+    height: 90vh;
+    margin-top: 2vh;
+    border: 10px solid;
+    border-color: aqua;
+    border-radius: 10px;
+}

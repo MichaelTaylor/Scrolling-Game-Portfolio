@@ -2,13 +2,22 @@ import React, { useState } from "react";
 import Styles from "./About.module.css";
 import Avatar from "../images/PD Yearbook Portraite.svg";
 import EmailLogo from "../images/Email Logo.svg";
+import ResumeLogo from "../images/Resume Logo.svg";
 import ContactForm from "../components/ContactForm";
+import Resume from "../components/Resume";
 
 const About = () => {
   const [showContact, setShowContact] = useState(false);
+  const [showResume, setShowResume] = useState(false);
 
   const ContactHandler = () => {
     setShowContact(!showContact);
+    setShowResume(false);
+  };
+
+  const ResumeHandler = () => {
+    setShowContact(false);
+    setShowResume(!showResume);
   };
 
   return (
@@ -28,8 +37,16 @@ const About = () => {
           onClick={ContactHandler}
           className={Styles.imageButton}
         />
+
+        <img
+          src={ResumeLogo}
+          alt=""
+          onClick={ResumeHandler}
+          className={Styles.imageButton}
+        />
       </div>
 
+      {showResume && <Resume />}
       {showContact && <ContactForm />}
     </div>
   );
