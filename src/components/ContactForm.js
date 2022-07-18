@@ -19,7 +19,7 @@ const ContactForm = () => {
   const getKeys = async () => {
     const netlifyResponse = await fetch(`${EMAIL_KEY}`);
     const netlifyData = await netlifyResponse.json();
-    console.log(netlifyData);
+
     keys.email = netlifyData.email;
     keys.template = netlifyData.template;
     keys.account = netlifyData.account;
