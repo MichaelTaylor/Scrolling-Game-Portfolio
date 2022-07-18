@@ -1,18 +1,33 @@
 import React from "react";
+import { useEffect } from "react";
 import EmailJS from "emailjs-com";
 import Styles from "./ContactForm.module.css";
 
-//Details at https://dashboard.emailjs.com/admin
+const EMAIL_KEY = "/.netlify/functions/Email-Key/Email-Key.js";
 
 const ContactForm = () => {
-  const sendEmail = (e) => {
+  const keys = {
+    email: "",
+    template: "",
+    account: "",
+  };
+
+  useEffect(() => {
+    getKeys();
+  });
+
+  const getKeys = async () => {
+    const netlifyResponse = await fetch(`${EMAIL_KEY}`);
+    const netlifyData = await netlifyResponse.json();
+    console.log(netlifyData);
+    keys.email = netlifyData.email;
+    keys.template = netlifyData.template;
+    keys.account = netlifyData.account;
+  };
+
+  const sendEmail = async (e) => {
     e.preventDefault();
-    EmailJS.sendForm(
-      "service_cokmfmm",
-      "template_sye8zsl",
-      e.target,
-      "user_tizXV5cqb3QMiQ4eCjqDc"
-    ).then(
+    EmailJS.sendForm(keys.email, keys.template, e.target, keys.account).then(
       (result) => {
         console.log(result.text);
       },
